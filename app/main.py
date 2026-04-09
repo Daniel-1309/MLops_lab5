@@ -18,7 +18,7 @@ def generate_code(prompt):
             json={
                 "model": MODEL_NAME,
                 "prompt": prompt,
-                "stream": False
+                "stream": True
             }
         )
 
@@ -37,13 +37,12 @@ interface = gr.Interface(
     inputs=gr.Textbox(
         lines=5,
         label="Enter your prompt",
-        placeholder="e.g. Write a Python function for binary search"
+        placeholder="Write a Python function for binary search"
     ),
     outputs=gr.Textbox(label="Generated Output"),
-    title="Local AI Coding Assistant",
-    description="Runs locally using Ollama (codegemma:2b)."
+    title="AI Coder",
+    description="codegemma:2b running locally to help you with your code"
 )
-
 
 # Run the app
 if __name__ == "__main__":
