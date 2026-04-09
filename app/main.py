@@ -37,7 +37,7 @@ interface = gr.Interface(
     inputs=gr.Textbox(
         lines=5,
         label="Enter your prompt",
-        placeholder="Write a Python function for binary search"
+        placeholder="Describe code you need to write"
     ),
     outputs=gr.Textbox(label="Generated Output"),
     title="AI Coder",
